@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-size: cover;
+}
+div{background-color:#c0c0c0;
+}
+h1{color: 
+    #000000;
+    font-family:Bradley Hand, cursive;
+text-align: center;}
+
+header{
+
+    text-align: center;
+    padding: 25px
+}
+
+.navbar ul{
+    list-style-type: none;
+    background-color: #aaaaaa;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+.navbar a{
+    color: #000000;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.navbar a:hover{
+    background-color: #000000;
+    color:#ffffff
+    
+}
+
+.navbar li{
+    float: left;
+}
+
+aside{
+    width: 30%;
+    float: left;
+    padding: 10px;
+}
+section{
+    width: 30%;
+    float: left;
+    padding: 10px;
+}
+
+article{
+    width: 30%;
+    float: left;
+    padding: 10px;
+}
+
+footer{
+    display: block;
+    clear:both;
+    background-color: #c0c0c0;
+    text-align: center;
+    padding: 25px
+}
+
+p{color:#a4c5f8;
+    font-size: medium; 
+    text-align: justify;
+    font-family: cursive}
+
+li{color:#000000;
+    font-size: large; 
+    text-align: justify;
+    font-family: cursive}
+h2{color:#000000;
+    font-family: cursive}
+
+    body{background-color: 
+        #373634;
+        background-image: linear-gradient(
+            45deg,
+            #000 25%,
+            transparent 25%,
+            transparent 75%,
+            #000 75%,
+            #000
+          ),
+          linear-gradient(
+            -45deg,
+            #000 25%,
+            transparent 25%,
+            transparent 75%,
+            #000 75%,
+            #000
+          );
+        background-size: 60px 60px;
+        background-repeat: repeat;}
