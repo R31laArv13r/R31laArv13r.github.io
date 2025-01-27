@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const characterProfiles = {
     1: {
       name: "Reila",
-      img: "aria.jpg",
+      img: "Reila Arvier.jpg",
       bio: `
         <strong>Full name:</strong> Reila Arvier<br>
         <strong>Age:</strong> 18<br>
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     2: {
       name: "Aaron",
-      img: "Lucid.jpg",
+      img: "Aaron.jpg",
       bio: `
         <strong>Full name:</strong> Aaron Grey<br>
         <strong>Age:</strong> 23<br>
