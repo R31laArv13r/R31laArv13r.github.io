@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tales of Chrystalia</title>
+  <link rel="stylesheet" href="ToC.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="#book">Book</a></li>
+      <li><a href="#characters">Characters</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <!-- Book Identity -->
+    <section id="book">
+      <div class="book-header">
+        <img src="Six Hands Chalk.jpg" alt="The Whispering Winds" class="book-cover">
+        <div class="book-details">
+          <h1>Tales of Chrystalia</h1>
+          <p><strong>Author:</strong> Reila Arvier</p>
+          <p><strong>Genre:</strong> Fantasy, Romance, adventure</p>
+          <p><strong>Published:</strong> xxxx</p>
+          <p><strong>Synopsis:</strong> Long ago, Chrystalia was united under the Diamond Kingdom, founded by the heroic Leon Adamante. 
+            Generations later, King Clarus’s decision to crown his wise second son, Callum, as heir sparked jealousy in the eldest, Arsen, who fled in anger.
+            Years later, Arsen returned as the vengeful King of the Obsidian Empire, destroying the Adamante royal family and leaving the 
+            kingdom in ruins. Snow blanketed the abandoned land, its crown awaiting a rightful heir to restore its glory.
+        </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Characters Section -->
+    <section id="characters">
+      <h2>Meet the Characters</h2>
+      <div class="characters-grid">
+        <div class="character" data-character="1">
+          <img src="Reila Arvier.jpeg" alt="Reila" class="character-img">
+          <h3>Reila</h3>
+        </div>
+        <div class="character" data-character="2">
+          <img src="Aaron Grey.jpeg" alt="Aaron" class="character-img">
+          <h3>Aaron</h3>
+        </div>
+        <div class="character" data-character="3">
+          <img src="Kieran Grey.jpeg" alt="Kieran" class="character-img">
+          <h3>Kieran</h3>
+        </div>
+        <div class="character" data-character="4">
+          <img src="#" alt="Serena" class="character-img">
+          <h3>Serena</h3>
+        </div>
+        <div class="character" data-character="5">
+          <img src="#" alt="Jake" class="character-img">
+          <h3>Jake</h3>
+        </div>
+        <div class="character" data-character="6">
+          <img src="Sapphire.jpeg" alt="Sapphire" class="character-img">
+          <h3>Sapphire</h3>
+        </div>
+        <div class="character" data-character="7">
+          <img src="#" alt="Ren" class="character-img">
+          <h3>Ren</h3>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Character Detail Popups -->
+  <div id="character-popup" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="character-name"></h2>
+      <img src="" id="character-img-popup" alt="Character Image">
+      <div id="character-info"></div>
+    </div>
+  </div>
+
+  <script src="ToC.js"></script>
+</body>
+</html>

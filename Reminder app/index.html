@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminder & Notes App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="/Index.html">Home</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Reminder & Notes App</h1>
+        
+        <section class="notes-section">
+            <h2>Notes</h2>
+            <div id="notesList" class="cards-container"></div>
+            <textarea id="newNote" placeholder="Write your note here..."></textarea>
+            <button id="addNoteBtn">Add Note</button>
+        </section>
+
+        <section class="reminders-section">
+            <h2>Reminders</h2>
+            <div id="remindersList" class="cards-container"></div>
+            <input type="datetime-local" id="reminderDate">
+            <textarea id="newReminder" placeholder="Write your reminder..."></textarea>
+            <button id="addReminderBtn">Add Reminder</button>
+        </section>
+    </div>
+
+    <!-- Modal for note details -->
+    <div id="noteModal" class="modal">
+        <div class="modal-content">
+            <p id="noteContent"></p>
+            <button id="closeModalBtn">Close</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

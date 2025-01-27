@@ -1,0 +1,240 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #e0c6f0, #c6d9f8); /* Soft lavender and icy blue gradient */
+  color: #4a4a4a;
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+}
+
+/* Navbar */
+.navbar {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-radius: 0 0 20px 20px;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #8a97d0; /* Soft lavender-blue for links */
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  background-color: #d8c9f0; /* Soft violet hover effect */
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffffe6;
+  border-radius: 30px;
+  box-shadow: 0 6px 20px #0000001a;
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Book Section */
+.book-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  border-radius: 15px;
+  padding: 20px;
+  animation: slideIn 0.5s ease-out;
+ 
+}
+
+.book-cover {
+  width: 50%;
+  height: 650px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 5px solid #8a97d0; /* Soft lavender-blue border */
+}
+
+/* Characters Section */
+.characters-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 10%;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  animation: fadeIn 1s ease-out;
+}
+
+.character {
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #fff;
+  padding: 15px;
+  border-radius: 100px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.character:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.character img {
+  image-resolution: 100%;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #8a97d0; /* Soft lavender-blue border */
+}
+
+.character h3 {
+  font-size: 1.5rem;
+  color: #4a4a4a;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Modal (Popup) Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 500px;
+  height: 60%;
+  position: relative;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  animation: bounceIn 0.5s ease-out;
+  overflow-y: auto; /* Enables vertical scrolling */
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #ccc #f1f1f1; /* For Firefox */
+}
+
+/* Custom scrollbar for WebKit browsers */
+.modal-content::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+  border-radius: 10%; /* Rounded track corners */
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background: #ccc; /* Color of the scrollbar thumb */
+  border-radius: 10%; /* Rounded thumb corners */
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #999; /* Darker color on hover */
+}
+
+
+
+#character-img-popup {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+#character-name {
+  font-size: 2rem;
+  color: #8a97d0; /* Soft lavender-blue */
+  text-align: center;
+}
+
+#character-info {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+  text-align: left;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: #8a97d0; /* Soft lavender-blue */
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.close:hover {
+  color: #7fb8cb; /* Slightly darker shade for hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twisted Wonderland Fanfic</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="TWST.css">
+    <script src="TWST.js" defer></script> <!-- External JS File -->
+</head>
+<body>
+    <header class="header">
+        <h1>Twisted Wonderland</h1>
+        <nav class="navbar">
+            <a href="/Index.html" class="nav-button">Home</a>
+            <a href="#" class="nav-button">News</a>
+            <a href="#" class="nav-button">World/Glossary</a>
+            <a href="#" class="nav-button">Characters</a>
+            <a href="#" class="nav-button">System</a>
+            <a href="#" class="nav-button">Staff/Cast</a>
+            <a href="#" class="nav-button">Special</a>
+        </nav>
+    </header>
+
+    <main class="wrapper">
+        <h2 class="section-title">Characters</h2>
+        <div class="dorm-container">
+            <div class="dorm" onclick="openPopup('heartslabyul')">
+                <img src="Img/heartslabyul_dormitory-archive.png" alt="Heartslabyul Dorm">
+                <h3>Heartslabyul Dorm</h3>
+                <p>Twisted from <span class="highlight">Alice in Wonderland</span></p>
+            </div>
+            <div class="dorm" onclick="openPopup('savanaclaw')">
+                <img src="Img/savanaclaw_dormitory-archive.png" alt="Savanaclaw Dorm">
+                <h3>Savanaclaw Dorm</h3>
+                <p>Twisted from <span class="highlight">The Lion King</span></p>
+            </div>
+            <div class="dorm" onclick="openPopup('octavinelle')">
+                <img src="Img/octavinelle_dormitory-archive.png" alt="Octavinelle Dorm">
+                <h3>Octavinelle Dorm</h3>
+                <p>Twisted from <span class="highlight">The Little Mermaid</span></p>
+            </div>
+            <div class="dorm" onclick="openPopup('scarabia')">
+                <img src="Img/scarabia_dormitory-archive.png" alt="Scarabia Dorm">
+                <h3>Scarabia Dorm</h3>
+                <p>Twisted from <span class="highlight">Aladdin</span></p>
+            </div>
+            <div class="dorm" onclick="openPopup('pomefiore')">
+                <img src="Img/pomefiore_dormitory-archive.png" alt="Pomefiore Dorm">
+                <h3>Pomefiore Dorm</h3>
+                <p>Twisted from <span class="highlight">Snow White</span></p>
+            </div>
+            <div class="dorm" onclick="openPopup('ignihyde')">
+                <img src="Img/ignihyde_dormitory-archive.png" alt="Ignihyde Dorm">
+                <h3>Ignihyde Dorm</h3>
+                <p>Twisted from <span class="highlight">Hercules</span></p>
+            </div>
+            <div class="dorm" onclick="openPopup('diasomnia')">
+                <img src="Img/diasomnia_dormitory-archive.png" alt="Diasomnia Dorm">
+                <h3>Diasomnia Dorm</h3>
+                <p>Twisted from <span class="highlight">Sleeping Beauty</span></p>
+            </div>
+            <div class="dorm" onclick="openPopup('staff')">
+                <img src="staff.png" alt="School Staff">
+                <h3>School Staff</h3>
+            </div>
+        </div>
+    </main>
+
+    <!-- Popup Modal -->
+    <div id="heartslabyul" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('heartslabyul')">&times;</span>
+            <h2>Heartslabyul Dorm Characters</h2>
+            <div class="character-list">
+                <ul>
+                    <li>Riddle Rosehearts</li>
+                    <li>Ace Trappola</li>
+                    <li>Deuce Spade</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="savanaclaw" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('savanaclaw')">&times;</span>
+            <h2>Savanaclaw Dorm Characters</h2>
+            <div class="character-list">
+                <ul>
+                    <li>Riddle Rosehearts</li>
+                    <li>Ace Trappola</li>
+                    <li>Deuce Spade</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        <div id="heartslabyul" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('heartslabyul')">&times;</span>
+            <h2>Heartslabyul Dorm Characters</h2>
+            <div class="character-list">
+                <ul>
+                    <li>Riddle Rosehearts</li>
+                    <li>Ace Trappola</li>
+                    <li>Deuce Spade</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="heartslabyul" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('heartslabyul')">&times;</span>
+            <h2>Heartslabyul Dorm Characters</h2>
+            <div class="character-list">
+                <ul>
+                    <li><img src="character2.jpg" alt="Lucid" class="character-img">
+                        Riddle Rosehearts
+                    </li>
+                    <li>Ace Trappola</li>
+                    <li>Deuce Spade</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- You can duplicate and modify the above divs for other dorms as needed -->
+
+    <footer class="footer">
+        <a href="#top" class="action-button">Page Top</a>
+    </footer>
+</body>
+</html>

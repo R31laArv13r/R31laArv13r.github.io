@@ -1,0 +1,228 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f3e8; /* Very light beige background */
+  color: #7f5c4d; /* Lighter dark brown for text */
+  animation: fadeIn 1s ease-out; /* Fade in effect for the body */
+}
+
+/* Navbar */
+.navbar {
+  background: #e3d1c7; /* Light taupe beige */
+  padding: 1em 0;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: slideIn 1s ease-out; /* Slide in from top */
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #7f5c4d; /* Lighter dark brown */
+  font-weight: bold;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  transition: color 0.3s ease; /* Smooth transition on color change */
+}
+
+.navbar ul li a:hover {
+  color: #cfa78c; /* Soft light brown on hover */
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #fff; /* White background for a clean, airy feel */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1s ease-out; /* Slide up effect */
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards; /* Fade in effect */
+}
+
+.profile-header img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border: 5px solid #cfa78c; /* Light brown border */
+}
+
+/* Tabs Section */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 12px 25px;
+  border-radius: 25px;
+  background: #f3e0c9; /* Very soft light brown */
+  font-size: 1rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.tab:hover {
+  background: #cfa78c; /* Light brown on hover */
+  transform: scale(1.1);
+}
+
+/* Tab Content */
+.tab-content {
+  display: none;
+  padding: 20px;
+  border-radius: 15px;
+  background: #f9f1e7; /* Very light creamy beige */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Books Grid */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  opacity: 0;
+  animation: fadeInUp 1s ease-out forwards; /* Fade in effect for books */
+}
+
+.book {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.book img {
+  width: 150px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #cfa78c; /* Light brown border */
+  transition: transform 0.3s ease;
+}
+
+.book:hover img {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: fadeInModal 0.5s ease-out forwards; /* Smooth fade-in effect for modal */
+}
+
+.modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #7f5c4d; /* Lighter dark brown */
+}
+
+/* Button Hover Effects */
+button {
+  background-color: #cfa78c; /* Soft light brown */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #b69b7d; /* Slightly darker brown on hover */
+  transform: scale(1.05); /* Smooth scale on hover */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInModal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* Remove underline for all links and set a fixed color */
+a {
+  text-decoration: none;
+  color: inherit; /* Use the inherited color, or set a specific color */
+}
+
+/* Ensure no color change on hover */
+a:hover {
+  text-decoration: none; /* Optional: Add underline only on hover */
+  color: inherit; /* Keep the same color as the default state */
+}
