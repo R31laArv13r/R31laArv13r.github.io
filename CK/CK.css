@@ -1,13 +1,23 @@
 /* Importing Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap');
 
+/* CSS Variables for Theme */
+:root {
+    --primary-color: #8A2BE2;
+    --secondary-color: #ff0077;
+    --background-color: #0e0e0e;
+    --text-color: #e4e4e4;
+    --card-bg: rgba(255, 255, 255, 0.1);
+    --shadow-color: rgba(138, 43, 226, 0.5);
+}
+
 /* General Styles */
 body {
     font-family: 'Rajdhani', sans-serif;
     margin: 0;
     padding: 0;
-    background: #0e0e0e;
-    color: #e4e4e4;
+    background: var(--background-color);
+    color: var(--text-color);
     box-sizing: border-box;
     overflow-x: hidden;
 }
@@ -44,8 +54,8 @@ body {
     position: sticky;
     top: 0;
     z-index: 1;
-    border-bottom: 3px solid #8A2BE2;
-    box-shadow: 0 4px 20px rgba(138, 43, 226, 0.5);
+    border-bottom: 3px solid var(--primary-color);
+    box-shadow: 0 4px 20px var(--shadow-color);
     animation: smoothFadeIn 0.8s ease-in-out;
 }
 
@@ -56,7 +66,7 @@ body {
 }
 
 .navbar ul li a {
-    color: #8A2BE2;
+    color: var(--primary-color);
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: 500;
@@ -64,9 +74,10 @@ body {
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.navbar ul li a:hover {
-    color: #ff0077;
+.navbar ul li a:hover, .navbar ul li a:focus {
+    color: var(--secondary-color);
     transform: translateY(-5px);
+    outline: none;
 }
 
 /* Container */
@@ -84,10 +95,10 @@ body {
     display: flex;
     align-items: center;
     gap: 30px;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--card-bg);
     border-radius: 20px;
     padding: 40px;
-    box-shadow: 0 5px 20px rgba(138, 43, 226, 0.5);
+    box-shadow: 0 5px 20px var(--shadow-color);
     margin-bottom: 40px;
     transition: transform 0.3s ease;
     animation: smoothFadeIn 0.8s ease-in-out;
@@ -101,7 +112,7 @@ body {
     width: 350px;
     height: 450px;
     border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(138, 43, 226, 0.5);
+    box-shadow: 0 4px 20px var(--shadow-color);
     transition: transform 0.3s ease;
 }
 
@@ -110,14 +121,14 @@ body {
 }
 
 .book-details {
-    color: #e4e4e4;
+    color: var(--text-color);
     font-size: 1.2rem;
     line-height: 1.7;
     flex-grow: 1;
 }
 
 .book-details strong {
-    color: #ff0077;
+    color: var(--secondary-color);
 }
 
 /* Characters Section */
@@ -132,13 +143,14 @@ body {
 .character {
     text-align: center;
     padding: 20px;
-    border: 2px solid #8A2BE2;
+    border: 2px solid var(--primary-color);
     border-radius: 20px;
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--card-bg);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    will-change: transform, box-shadow;
 }
 
 .character:hover {
@@ -175,7 +187,7 @@ body {
 
 .modal-content {
     background: #121212;
-    color: #e4e4e4;
+    color: var(--text-color);
     padding: 40px;
     border-radius: 20px;
     text-align: center;
@@ -196,14 +208,14 @@ body {
     object-fit: cover;
     border-radius: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 20px rgba(138, 43, 226, 0.4);
+    box-shadow: 0 4px 20px var(--shadow-color);
 }
 
 /* Character Info */
 #character-info {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #e4e4e4;
+    color: var(--text-color);
     text-align: left;
     max-height: 400px;
     overflow-y: auto;
@@ -218,24 +230,24 @@ body {
     top: 20px;
     right: 20px;
     font-size: 30px;
-    color: #ff0077;
+    color: var(--secondary-color);
     cursor: pointer;
     transition: color 0.3s ease;
 }
 
 .close:hover {
-    color: #8A2BE2;
+    color: var(--primary-color);
 }
 
 /* Headings */
 h1, h2 {
     font-family: 'Rajdhani', sans-serif;
     letter-spacing: 2px;
-    color: #8A2BE2;
+    color: var(--primary-color);
 }
 
 h3 {
     font-family: 'Rajdhani', sans-serif;
     letter-spacing: 1px;
-    color: #ff0077;
+    color: var(--secondary-color);
 }
