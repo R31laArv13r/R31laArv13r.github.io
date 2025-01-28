@@ -251,3 +251,73 @@ h3 {
     letter-spacing: 1px;
     color: var(--secondary-color);
 }
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .navbar ul li a {
+        font-size: 1.2rem;
+    }
+
+    .container {
+        padding: 20px 10px;
+    }
+
+    .book-header {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .book-cover {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+    }
+
+    .book-details {
+        font-size: 1rem;
+    }
+
+    .characters-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    .character img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .modal-content {
+        width: 90%;
+        padding: 20px;
+    }
+
+    #character-img-popup {
+        width: 200px;
+        height: 200px;
+    }
+
+    #character-info {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .close {
+        font-size: 24px;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+}
