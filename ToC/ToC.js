@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const characterName = document.getElementById('character-name');
   const characterImg = document.getElementById('character-img-popup');
   const characterInfo = document.getElementById('character-info');
+  
 
   const characterProfiles = {
     1: {

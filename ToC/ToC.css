@@ -8,6 +8,18 @@ body {
   line-height: 1.8;
 }
 
+/* Optional: If you want the gradient to extend beyond the container even further */
+body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Makes the gradient extend for the entire viewport height */
+  background: linear-gradient(to bottom, #e0c6f0, #c6d9f8);
+  z-index: -1; /* Place it behind the content */
+}
+
 /* Navbar */
 .navbar {
   background: rgba(255, 255, 255, 0.9);
@@ -56,6 +68,7 @@ body {
   border-radius: 1.5rem;
   box-shadow: 0 6px 20px #0000001a;
   animation: fadeIn 0.8s ease-out;
+  position: relative; /* Add this for the pseudo-element positioning */
 }
 
 /* Book Section */
