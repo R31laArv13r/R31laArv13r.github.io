@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const characterProfiles = {
     1: {
       name: "Reila",
-      img: "Reila Arvier.jpeg",
+      img: "IMG_3901.jpeg",
       bio: `
         <strong>Full name:</strong> Reila Arvier<br>
         <strong>Age:</strong> 18<br>
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     2: {
       name: "Aaron",
-      img: "Aaron Grey.jpeg",
+      img: "IMG_3900.jpeg",
       bio: `
         <strong>Full name:</strong> Aaron Grey<br>
         <strong>Age:</strong> 23<br>
@@ -93,7 +93,7 @@ He once called a womanizer even though he never play with woman and always respe
     },
     4: {
       name: "Serena",
-      img: "#",
+      img: "IMG_3904.jpeg",
       bio:`
       <strong>Full name:</strong> Serena Melody <br>
       <strong>Age:</strong> 20<br>
