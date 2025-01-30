@@ -1,0 +1,514 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #e0e7ff, #f3d8ff); /* Soft pastel gradient */
+  color: #444;
+  transition: background 0.5s ease-in-out; /* Smooth background transition */
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(211, 173, 249, 0.6); /* Light transparent purple */
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Softer shadow */
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  animation: fadeInUp 1s ease-out forwards; /* Smooth fade-in effect */
+}
+
+.header .logo h2 {
+  font-size: 1.8rem;
+  color: #7a3d8f;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-left: 25px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #7a3d8f;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #a0c4ff; /* Soft hover effect */
+}
+
+#theme-toggle {
+  background-color: rgba(122, 61, 143, 0.8); /* Soft transparent purple */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.4s ease-in-out, transform 0.2s ease;
+  backdrop-filter: blur(8px); /* Crystal-like effect */
+}
+
+#theme-toggle:hover {
+  background-color: rgba(146, 91, 176, 0.8);
+  transform: scale(1.05);
+}
+
+/* Main Content */
+main {
+  margin-top: 120px; /* Adjusted to prevent overlap with the fixed header */
+  padding: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeInUp 1.2s ease-out forwards; /* Smooth fade-in for main content */
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  margin: 40px 0;
+  background: rgba(255, 255, 255, 0.7); /* Light translucent white background */
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 1.3s ease-out forwards; /* Smooth fade-in for hero */
+}
+
+.hero h1 {
+  color: #7a3d8f; /* Soft purple */
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.hero p {
+  color: #5e3380;
+  font-size: 1.4rem;
+}
+
+/* Profile Section */
+.card {
+  background: rgba(255, 255, 255, 0.9); /* Light translucent background */
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08); /* Softer shadow */
+  margin-bottom: 40px;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-out forwards; /* Smooth fade-in for cards */
+}
+
+.profile-text h2 {
+  font-size: 2rem;
+  color: #7a3d8f;
+}
+
+.profile-text p {
+  font-size: 1.2rem;
+  color: #5e3380;
+}
+
+/* Books Section (Horizontal Scroll Cards) */
+.books-grid {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  overflow-x: auto; /* Horizontal scroll */
+  margin-bottom: 40px;
+}
+
+.book {
+  background: rgba(161, 196, 255, 0.7); /* Soft blue */
+  padding: 20px;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px); /* Gentle glass effect */
+  min-width: 250px; /* Fixed width for cards */
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-out forwards; /* Smooth fade-in for books */
+}
+
+.book img {
+  width: 180px;
+  height: 250px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.book:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.book h3 {
+  font-size: 1.3rem;
+  color: #7a3d8f;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background: linear-gradient(135deg, #ab7fe9, #9b68d0); /* Blue to purple gradient */
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  width: 80%;
+  max-width: 500px;
+  backdrop-filter: blur(10px); /* Crystal-like blur effect */
+  animation: fadeInUp 1s ease-out forwards; /* Smooth fade-in for modal */
+}
+
+.modal-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.modal-content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+#close-modal {
+  background-color: rgba(146, 91, 176, 0.8);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  backdrop-filter: blur(10px); /* Crystal-like blur */
+}
+
+#close-modal:hover {
+  background-color: rgba(122, 61, 143, 0.8);
+  transform: scale(1.05);
+}
+
+/* Button Styles */
+button {
+  padding: 0.8rem 1.6rem;
+  border: none;
+  background: linear-gradient(145deg, #c7d2fe, #8a97d0); /* Smooth gradient from soft lavender to a cool blue */
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 30px; /* Rounded corners */
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for all effects */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1), 0px 1px 15px rgba(0, 0, 0, 0.05); /* Soft, blurred shadow */
+  backdrop-filter: blur(10px); /* Frosted-glass effect */
+  border: 2px solid rgba(138, 151, 208, 0.3); /* Slight border with transparency */
+}
+
+button:hover {
+  background: linear-gradient(145deg, #8a97d0, #c7d2fe); /* Reverse gradient on hover */
+  transform: translateY(-4px); /* Slight lift effect */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2), 0px 4px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+}
+
+button:active {
+  transform: translateY(2px); /* Slight "press" effect */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Reduced shadow for "pressed" look */
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(138, 151, 208, 0.8); /* Glowing focus effect */
+  border: 2px solid rgba(138, 151, 208, 0.6); /* Glowing border when focused */
+}
+
+a {
+  text-decoration: none;
+  color: #f0f0f0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .profile-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .profile-text p {
+    font-size: 1rem;
+  }
+
+  .books-grid {
+    gap: 10px;
+  }
+
+  .book img {
+    width: 150px;
+    height: 200px;
+  }
+
+  .book h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header .logo h2 {
+    font-size: 1.5rem;
+  }
+
+  .navbar ul {
+    padding-left: 0;
+  }
+
+  .navbar ul li {
+    margin-left: 0;
+  }
+
+  .hero {
+    padding: 30px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .profile-text h2 {
+    font-size: 1.3rem;
+  }
+
+  .profile-text p {
+    font-size: 0.9rem;
+  }
+
+  .books-grid {
+    gap: 10px;
+  }
+
+  .book img {
+    width: 130px;
+    height: 170px;
+  }
+}
+
+/* Animation for smoother fade-in */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* General Dark Theme */
+body.dark-theme {
+  background: linear-gradient(135deg, #1c2b3d, #3a4f6f); /* Muted dark theme */
+  color: #f0f0f0;
+  transition: all 0.3s ease; /* Smooth transition for all elements */
+}
+
+/* Navbar */
+body.dark-theme .navbar ul li a {
+  color: #f0f0f0;
+  transition: color 0.3s ease;
+}
+
+body.dark-theme .navbar ul li a:hover {
+  color: #a0c4ff; /* Soft hover effect */
+}
+
+/* Header */
+body.dark-theme .header {
+  background: rgba(211, 173, 249, 0.6); /* Light transparent purple */
+  color: #f0f0f0;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme .header .logo h2 {
+  color: #f0f0f0;
+  transition: color 0.3s ease;
+}
+
+/* Books Section */
+body.dark-theme .book {
+  background: rgba(146, 91, 176, 0.8); /* Darker background for books */
+  color: #c7d2fe;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme .book img {
+  filter: brightness(0.8); /* Dim images for the dark theme */
+  transition: filter 0.3s ease;
+}
+
+body.dark-theme .book:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  background: rgba(122, 61, 143, 0.8); /* Darker on hover */
+}
+
+/* Modal */
+body.dark-theme .modal {
+  background: rgba(0, 0, 0, 0.5);
+  transition: background 0.3s ease;
+}
+
+body.dark-theme .modal-content {
+  background: linear-gradient(135deg, #ab7fe9, #9b68d0); /* Blue to purple gradient */
+  color: white;
+  backdrop-filter: blur(10px); /* Crystal-like blur effect */
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme .close {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+/* Button */
+body.dark-theme button {
+  background: linear-gradient(145deg, #8a97d0, #c7d2fe); /* Soft gradient */
+  color: white;
+  border-radius: 30px;
+  border: 2px solid rgba(138, 151, 208, 0.3); /* Slight border with transparency */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1), 0px 1px 15px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body.dark-theme button:hover {
+  background: linear-gradient(145deg, #8a97d0, #c7d2fe);
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2), 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme button:active {
+  transform: translateY(2px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-theme button:focus {
+  outline: none;
+  box-shadow: 0px 0px 10px rgba(138, 151, 208, 0.8);
+  border: 2px solid rgba(138, 151, 208, 0.6);
+}
+
+/* Theme Toggle */
+body.dark-theme #theme-toggle {
+  background-color: rgba(122, 61, 143, 0.9);
+  transition: background-color 0.3s ease;
+}
+
+body.dark-theme #theme-toggle:hover {
+  background-color: rgba(146, 91, 176, 0.8);
+  transform: scale(1.05);
+}
+
+/* Media Queries */
+body.dark-theme .navbar ul li a,
+body.dark-theme .header .logo h2,
+body.dark-theme .book,
+body.dark-theme .modal-content,
+body.dark-theme button {
+  transition: all 0.3s ease; /* Smooth transition for elements within dark theme */
+}
+
+/* Header */
+body.dark-theme .header .logo h2 {
+  color: #e0e0e0; /* Brighter color for h2 */
+  transition: color 0.3s ease;
+}
+
+/* Book Titles */
+body.dark-theme .book h3 {
+  color: #d0d0d0; /* Brighter color for h3 */
+  transition: color 0.3s ease;
+}
+
+body.dark-theme .card {
+  background: #ffffffe1; /* Light translucent background */
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08); /* Softer shadow */
+  margin-bottom: 40px;
+  opacity: 0;
+  color:#000000;
+  animation: fadeInUp 1.5s ease-out forwards; /* Smooth fade-in for cards */
+}
+
+/* Profile Image */
+#profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Circular shape */
+  border: 4px solid #7a3d8f; /* Purple border */
+  object-fit: cover; /* Ensures the image fits the circle */
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Dark Theme: Circular Profile Image with Dark Border */
+body.dark-theme #profile img {
+  border-color: #c667fd; /* Light border in dark theme */
+}
