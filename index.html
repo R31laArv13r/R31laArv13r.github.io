@@ -5,51 +5,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reila Arvier</title>
   <link rel="stylesheet" href="Indexstyles.css">
+  <script defer src="Indexscript.js"></script>
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar">
-    <ul>
-      <li><a href="#profile">About</a></li>
-      <li><a href="Reminder app/index.html">Reminder</a></li>
-    </ul>
-  </nav>
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="logo"><h2>Reila Arvier</h2></div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="javascript:void(0);" class="tab-link" data-tab="profile">About</a></li>
+        <li><a href="javascript:void(0);" class="tab-link" data-tab="books">Books</a></li>
+        <li><a href="javascript:void(0);" class="tab-link" data-tab="contact">Contact</a></li>
+        <li><button id="theme-toggle">🌙 Toggle Theme</button></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="container">
-    <!-- Author Profile -->
-    <section id="profile">
-      <div class="profile-header">
-        <img src="image-150x150.jpg" alt="Reila Arvier">
-        <div class="profile-details">
-          <h1>Reila Arvier</h1>
-          <p><strong>Age:</strong> 20</p>
-          <p><strong>Height:</strong> 150 cm</p>
-          <p><strong>Birthday:</strong> Jan. 2nd</p>
-          <p><strong>Sign:</strong> Capricorn</p>
-          <p><strong>Job:</strong><br>
-            -Author<br>
-          -College Student</p>
-        </div>
+  <!-- Main Content -->
+  <main>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Welcome to Reila Arvier's World</h1>
+      <p>Author & Storyteller | Dive into captivating tales</p>
+    </section>
+
+    <!-- Profile Section (Initially Visible) -->
+    <section id="profile" class="card tab-content">
+      <img src="image-150x150.jpg" alt="Reila Arvier" >
+      <div class="profile-text">
+        <h2>Reila Arvier</h2>
+        <p><strong>Age:</strong> 20</p>
+        <p><strong>Height:</strong> 150 cm</p>
+        <p><strong>Birthday:</strong> Jan. 2nd</p>
+        <p><strong>Sign:</strong> Capricorn</p>
+        <p><strong>Occupation:</strong> Author & College Student</p>
       </div>
     </section>
 
-    <!-- Tabs -->
-    <div class="tabs">
-      <div class="tab" data-content="life">💖 Life</div>
-      <div class="tab" data-content="likes">🎀 Likes</div>
-      <div class="tab" data-content="books">📚 Books</div>
-    </div>
-
-    <!-- Tab Content -->
-    <div class="tab-content" id="life-content">
-      <p>Reila Arvier was born on January 2nd, 2005, in a small town...</p>
-    </div>
-    <div class="tab-content" id="likes-content">
-      <p>Reila loves reading, listening to music, and spending time in nature...</p>
-    </div>
-    <div class="tab-content" id="books-content">
-      <h2>Books by Reila</h2>
+    <!-- Books Section (Initially Hidden) -->
+    <section id="books" class="books-grid tab-content" style="display: none;">
+      <h2>Books</h2>
       <div class="books-grid">
 
         <div class="book" data-title="Tales Of Chrystalia" 
@@ -74,19 +71,26 @@
         <p>coming soon</p>
       </div>
     </div>
-  </div>
+    </section>
+
+    <!-- Contact Section (Initially Hidden) -->
+    <section id="contact" class="card tab-content" style="display: none;">
+      <h2>Contact</h2>
+      <p>For collaborations and inquiries, reach out at:</p>
+      <p>Email: reila@example.com</p>
+    </section>
+
+  </main>
 
   <!-- Modal for Book Details -->
-  <div id="book-modal" class="modal" style="display: none;">
+  <div id="book-modal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
       <h2 id="modal-title"></h2>
       <p id="modal-info"></p>
-      <!-- Adding a close button inside the modal -->
-      <button id="close-modal" class="modal-close-button">Close</button>
-    </div> 
+      <button id="close-modal">Close</button>
+    </div>
   </div>
 
-  <script src="Indexscript.js"></script>
 </body>
 </html>
